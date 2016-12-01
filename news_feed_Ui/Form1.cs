@@ -14,5 +14,10 @@ namespace news_feed_Ui
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

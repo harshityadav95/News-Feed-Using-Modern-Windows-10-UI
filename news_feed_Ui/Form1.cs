@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using MetroFramework.Forms;
+using System.Net;
 
 namespace news_feed_Ui
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         public Form1()
         {
@@ -17,7 +19,14 @@ namespace news_feed_Ui
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            WebClient webClient = new WebClient();
+            richTextBox1.Text = webClient.DownloadString("https://raw.githubusercontent.com/harshityadav95/exp_cmd/master/Rss%20feed.txt");
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
